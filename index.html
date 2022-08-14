@@ -16,41 +16,30 @@
     </head>
     <body>  
         <div id="container">
-            <h1>Pomodoro JS </h1>
             <div id="principal">
+                <h1 class="pomodoro-tittle">Pomodoro</h1>
                 <section id="pomodoro">
                     <div class="pomodoro-contagem"> 
-                        <h3>Pomodoro</h3>
-                        <p><span class="pomo-min">25</span>:<span class="pomo-seg">00</span></p>
+                        <p class="pomoTime"><span class="pomo-min">25</span>:<span class="pomo-seg">00</span></p>
                     </div>
-                    
-                    <div class="ciclos">
-                        <h3>Ciclos</h3>
-                        <p class="pomo-ciclos">0</p>
-                    </div>
-                    
+                
+    
                     <div class="descanso">
-                        <h3>Descanso</h3>
                         <p><span class="descanso-min">05</span>:<span class="descanso-seg">00</span></p>
                     </div>
                 </section>
                     
                 <ul class="controles">
-                    <li class="btnplay"><i class="fas fa-play"></i></li>
-                    <li class="btnpause"><i class="fas fa-pause"></i></li>
-                    <li class="btnstop"><i class="fas fa-stop"></i></li>
+                    <li id="start" class="btnplay">START</li>
+                    <li id="pause" class="btnpause">Pause</li>
+                    <li id="stop"  class="btnstop">Stop</li>
                 </ul>
 
-                <div class="dark-mode">
-                    <button class="btn-dark">Dark Mode</button>
-                </div> 
+               
             </div>
            
-            <footer id="rodape">
-                <p>&copy;<span class="ano"></span> Copyright - Desenvolvido por <a href="https://www.instagram.com/leandro.rafaeel/" target="_blank">Leandro Rafael</a></p>
-            </footer>
+        
         </div>
-        <!-- javascript -->
         <script src="assets/js/script.js"></script>
     </body>
 </html>
