@@ -1,8 +1,21 @@
+function soundeffect(){
+    let sound = document.querySelector('#soundtrackeffect')
+    sound.innerHTML = '<audio id="som" src="/componentes/sound2.mp3" autoplay></audio>'
+    console.log(sound)
+}
+
+function SoundRemove(){
+    let som = document.querySelector('#som')
+    som.remove()
+   
+}
+
+
 
 let minutos = document.querySelector(".pomo-min");
 let segundos = document.querySelector(".pomo-seg");
 
-let ciclos = document.querySelector(".pomo-ciclos");
+let ciclos = 0;
 
 let descansoMin = document.querySelector(".descanso-min");
 let descansoSeg = document.querySelector(".descanso-seg");
@@ -62,10 +75,16 @@ function trocandoFundo(){
     body.classList.add('fundoazul')
     let principal = document.querySelector('#principal')
     principal.style.backgroundColor = "#5e9ca0"
+    let buttonId = document.querySelector('#buttonTask')
+    let buttonId2 = document.querySelector('buttonTask2')
+    buttonId.style.backgroundColor = "#5e9ca0"
+    buttonId2.style.backgroundColor = "#5e9ca0"
 }
 
 //funcao que inicia o pomodoro
 btnStart.addEventListener("click", function(){
+    soundeffect()
+    
     
     if(startPomodoro === undefined){
         startPomodoro = setInterval(pomodoroTimer, 1000);
@@ -74,18 +93,23 @@ btnStart.addEventListener("click", function(){
         alert("O pomodoro já está funcionando!");
     }
     otherButtonStop()
-    prevent.default()
+    
 });
 
 //funcao que pausa o pomodoro
 btnPause.addEventListener("click", function(){
+    soundeffect()
+    
     clearInterval(startPomodoro);
     startPomodoro = undefined;
     otherButtonStart()
+    
 });
 
 //funcao que reseta o pomodoro
 btnStop.addEventListener("click", function(){
+    soundeffect()
+
     
     clearInterval(startPomodoro);
     startPomodoro = undefined;
@@ -95,10 +119,7 @@ btnStop.addEventListener("click", function(){
 
     descansoMin.textContent = 5;
     descansoSeg.textContent = "00";
-
-    ciclos.textContent = 0;
-
-
+  
     
 });
 
@@ -137,12 +158,83 @@ function pomodoroTimer(){
 
         descansoSeg.textContent = 59;
         descansoMin.textContent = 5;
-
-        ciclos.textContent++;
+        let ciclos = ciclos + 1
         showPomodoro()
 
     }
 }
+
+let buttonTask = document.querySelector('#buttonTask')
+
+
+
+
+buttonTask.addEventListener("click", function input(){
+
+    
+    let inputs =  document.querySelector('#inputs')
+    inputs.innerHTML = `<input type="text" id="textTASK" class="inputStyle" placeholder="Qual tarefa voce deseja fazer?">
+    <div><button id="btn" class="btn" placeholder="salvar">Adicionar Tarefa</button></div>
+    `
+    let btn2 = document.querySelector('#btn')
+
+    btn2.addEventListener("click", function(){
+        
+        
+       let taskdiv = document.querySelector('#task2')
+       taskdiv.innerHTML = ` <div id="taskAdd">
+       <div class="taskStyle 1"><p class="pomo-ciclos">${ciclos}</p></div>
+       <div id="dois" class="taskStyle 1 off"><p class="pomo-ciclos">${ciclos}</p></div>
+   </div>`
+       let taskAdd = document.querySelector('#taskAdd')
+       let inptsValue = document.querySelector('#textTASK').value
+       let input1 = inptsValue
+       taskAdd.children[0].innerText = `${input1}`
+       let text = document.querySelector('#textTASK')
+      
+
+       if(taskAdd.children[0].textContent == input1){
+       
+
+        let inputs =  document.querySelector('#inputs')
+        inputs.children[1].innerHTML = `<input type="text" id="textTASK3" class="inputStyle" placeholder="Qual tarefa voce deseja fazer?">
+        <div><button id="btn2" class="btn2" placeholder="salvar">Adicionar Tarefa</button></div>`
+        let btn3 = document.querySelector('#btn2')
+        text.remove()
+
+        btn3.addEventListener("click", function(){
+           
+            
+            let inptsValue2 = document.querySelector('#textTASK3').value
+            let input2 = inptsValue2
+            let divOff = document.querySelector('#dois')
+            divOff.classList.remove('off')
+            divOff.classList.add('.on')
+            taskAdd.children[1].innerText= `${input2}`
+            
+           
+            let text = document.querySelector('#textTASK3')
+          
+            text.remove()
+            btn2.remove()
+            btn3.remove()            
+        })
+
+       }
+
+    })                    
+});
+
+
+let btn5 = document.querySelector('#buttonTask2')
+btn5.addEventListener("click", function(){
+    let taskAdd3 = document.querySelector('#taskAdd')
+    taskAdd3.remove()
+})
+
+
+
+
 
 
 

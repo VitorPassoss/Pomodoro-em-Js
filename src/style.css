@@ -7,18 +7,16 @@
     list-style: none;
 }
 
-@font-face {
-    font-family: 'Freshy';
-    src: url('/componentes/Freshy\ Bold\ Italic.otf');
-  }
+
 body{
     background-color: rgb(217, 85, 80);
     color: #fff;
 }
 
 :root{
-    --font-padrao: 'Baloo 2', cursive;
-    --font-numerica: 'Quantico', sans-serif;
+    font-family: 'Concert One', cursive;
+
+
 }
 /*dark mode*/
 .btn-dark{
@@ -81,8 +79,10 @@ body{
     font-size: 2.2rem;
 }
 #pomodoro p{
-    font-size: 100px;
-    font-family: var(--font-numerica);
+    font-size: 170px;
+    font-family: 'Concert One', cursive;
+
+    cursor: not-allowed;
 }
 .controles{
     display: flex;
@@ -129,12 +129,12 @@ body{
 
 .pomodoro-contagem p{
     position: relative;
-    font-size: 150px;
+    font-size: 300px;
     display: flex;
     align-items: center;
     text-align: center;
-    padding-top: 25px;
-    font-family: 'Freshy';
+    bottom: 20px;
+    font-family: 'Patrick Hand', cursive;
 
 }
 
@@ -202,4 +202,149 @@ body{
 .fundoazul{
     background-color: #4c9195 !important;
     transition: 1.5s;
+}
+
+
+#task{
+    margin-bottom: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#buttonTask{
+    background-color: #c84e49;
+    width: 430px;
+    height: 60px;
+    color: #fff;
+    border: 2px dashed gray;
+}
+
+.inputStyle{
+  border: none;
+  width: 470px;
+  height: 90px;
+  margin-top: 20px;
+  border-radius: 15px;
+  text-align:center;
+  position: relative;
+}
+
+
+
+
+  .taskStyle{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 20px;
+    margin: 10px;
+    height: 60px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 50px;
+    border-left: 5px solid #222222;
+    width: 400px;
+  }
+
+
+  #task{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #taskAdd{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TasksTit{
+    margin-right:330px ;
+    font-size: 25px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+
+
+  #buttonTask2{
+    background-color: #c84e49;
+    width: 430px;
+    height: 60px;
+    color: #fff;
+    margin-top: 30px;
+    border: 2px dashed gray;
+   
+}
+
+.btn{
+    position: relative;
+    background-color: white;
+    height: 30px;
+    width: 140px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family:'Patrick Hand', cursive; ;
+    font-size: 20px;
+}
+
+.btn2{
+    position: relative;
+    background-color: white;
+    height: 30px;
+    width: 140px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family:'Patrick Hand', cursive; ;
+    font-size: 20px;
+    left: 160px;
+}
+
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.off{
+    display: none;
+}
+
+.on{
+    display: flex;
+}
+
+
+.inputStyle::-webkit-input-placeholder{
+    color:#bdbdbd;
+    text-transform: uppercase;
+    font-style: bold;
+    position: relative;
+    bottom: 20px;
+    font-size: 20px;
+}
+.inputStyle::-moz-placeholder {
+    color:#bdbdbd;
+    text-transform: uppercase;
+    font-style: bold;
+    bottom: 20px;
+    font-size: 20px;
+}
+
+
+.pomo-ciclos{
+    color: #222222;
+    font-size: 20px;
 }
