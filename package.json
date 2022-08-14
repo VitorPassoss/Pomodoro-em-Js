@@ -1,5 +1,5 @@
 {
-  "name": "pomodoro",
+  "name": "npm",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,14 +7,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leandrorafaeel/pomodoro-js.git"
+    "url": "git+https://github.com/VitorPassoss/Pomodoro-em-Js.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "VitorPassos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leandrorafaeel/pomodoro-js/issues"
+    "url": "https://github.com/VitorPassoss/Pomodoro-em-Js"
   },
-  "homepage": "https://github.com/leandrorafaeel/pomodoro-js#readme",
+  "homepage": "https://github.com/VitorPassoss/Pomodoro-em-Js#readme",
+  "dependencies": {
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
   "description": ""
 }
