@@ -76,9 +76,10 @@ function trocandoFundo(){
     let principal = document.querySelector('#principal')
     principal.style.backgroundColor = "#5e9ca0"
     let buttonId = document.querySelector('#buttonTask')
-    let buttonId2 = document.querySelector('buttonTask2')
+    let buttonId2 = document.querySelector('#buttonTask2')
     buttonId.style.backgroundColor = "#5e9ca0"
     buttonId2.style.backgroundColor = "#5e9ca0"
+    
 }
 
 //funcao que inicia o pomodoro
